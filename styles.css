@@ -1,0 +1,78 @@
+:root{
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent:#e11d48;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid var(--clr-dark);
+}
+
+.item{
+    width: 150px;
+    height: 150px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 10px solid var(--clr-accent);
+    border-radius: 10px;
+}
+
+/* END OF BASE STYLES */
+
+.container{
+    display: flex;
+    /* flex-direction: row; (row= top left corner) (column= top left corner) (row-reverse= top right corner) (column-reverse= bottom left corner)*/
+    
+    /* justify-content: flex-start (top left) flex-end (top right) flex-center (top middle) space-between (evenly distribute space) space-around (space between margin and block) space-evenly (even on all sides) ; */
+    align-items: flex-start;
+    /* align-items is the same as justify content except that align-items: baseline; is used so the baseline text is aligned*/
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap; is used when there is not enough space in the row or column */
+    /* align-content: flex-start; */
+    /* align-content only works if flex-wrap is set to wrap */
+    /* gap: 1cm; */
+    /* gap puts a gap between items */
+}
+
+/* use .item-1{
+    font-size: 1.5rem; to see the difference of baseline
+} */
+
+.item-1{
+    order: 1;
+}
+
+.item-3{
+    /* flex-grow: 1; */
+    /* flex-grow gives proportion*/
+    /* flex-shrink: 0; */
+    /* the item selected will shrink faster than the others, when it is set to 0 the item will refuse to shrink*/
+    /* flex-basis: 0px; */
+    /* flex-basis defines the size of an item before the remaining space is distributed*/
+    /* flex: 1; */
+    /* flex is shorthand for the past 3 tags but the 2 and 3rd parameters are optional*/
+    /* align-self: baseline; */
+    /* overrides the value you set in the align-item in the container for an individual item*/
+    order: -1;
+    /* changes the order in which items appear */
+}
